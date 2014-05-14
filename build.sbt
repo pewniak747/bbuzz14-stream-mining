@@ -9,7 +9,8 @@ libraryDependencies ++= Seq(
   "com.netflix.rxjava"       % "rxjava-scala"     % "0.18.3",
   "net.databinder.dispatch" %% "dispatch-core"    % "0.11.1",
   "org.json4s"              %% "json4s-jackson"   % "3.2.9" exclude("org.scala-lang", "scalap"),
-  "redis.clients"            % "jedis"            % "2.4.2"
+  "redis.clients"            % "jedis"            % "2.4.2",
+  "org.zeromq"               % "jeromq"           % "0.3.2"
 )
 
 net.virtualvoid.sbt.graph.Plugin.graphSettings

@@ -10,10 +10,10 @@ package object bbuzz {
 
   type TweetObservable = Observable[Tweet]
 
-  def createTweetAsStream(json: String) =
-    createTweet(json).toOption.toIterable
-
   def createTweet(json: String) =
+    tryCreateTweet(json).toOption.toIterable
+
+  def tryCreateTweet(json: String) =
     Try(TwitterObjectFactory.createStatus(json))
 
 }
