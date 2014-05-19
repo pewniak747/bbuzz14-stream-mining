@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>bbuzz - bbuzz</title>
+          <meta name="description" content="bbuzz - bbuzz" />
+          <meta name="keywords" content="bbuzz bbuzz" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../index.html';
+            var hash = 'bbuzz.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../lib/package_big.png" />
+        
+        <h1>bbuzz</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bbuzz</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="bbuzz"><span>bbuzz</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="bbuzz.ElasticsearchScanTweets" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ElasticsearchScanTweetsextendsTweetProvider.FromStringIterable"></a>
+      <a id="ElasticsearchScanTweets:ElasticsearchScanTweets"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ElasticsearchScanTweets.html"><span class="name">ElasticsearchScanTweets</span></a><span class="result"> extends <a href="TweetProvider$$FromStringIterable.html" class="extype" name="bbuzz.TweetProvider.FromStringIterable">FromStringIterable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides tweets by scanning an Elasticsearch index.</p>
+    </li><li name="bbuzz.RedisPubsubTweets" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RedisPubsubTweetsextendsTweetProvider"></a>
+      <a id="RedisPubsubTweets:RedisPubsubTweets"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RedisPubsubTweets.html"><span class="name">RedisPubsubTweets</span></a><span class="result"> extends <a href="TweetProvider.html" class="extype" name="bbuzz.TweetProvider">TweetProvider</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="bbuzz.RedisScanTweets" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RedisScanTweetsextendsTweetProvider.FromStringIterable"></a>
+      <a id="RedisScanTweets:RedisScanTweets"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RedisScanTweets.html"><span class="name">RedisScanTweets</span></a><span class="result"> extends <a href="TweetProvider$$FromStringIterable.html" class="extype" name="bbuzz.TweetProvider.FromStringIterable">FromStringIterable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides tweets by scanning a Redis db.</p>
+    </li><li name="bbuzz.Tweet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Tweet=twitter4j.Status"></a>
+      <a id="Tweet:Tweet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Tweet</span><span class="result"> = <span class="extype" name="twitter4j.Status">Status</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="bbuzz.TweetConsumer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TweetConsumerextendsbbuzz.TweetObserver"></a>
+      <a id="TweetConsumer:TweetConsumer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="TweetConsumer.html"><span class="name">TweetConsumer</span></a><span class="result"> extends <a href="#TweetObserver=rx.lang.scala.Observer[bbuzz.package.Tweet]" class="extmbr" name="bbuzz.TweetObserver">TweetObserver</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Consumes tweets of a stream.</p>
+    </li><li name="bbuzz.TweetObservable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TweetObservable=rx.lang.scala.Observable[bbuzz.package.Tweet]"></a>
+      <a id="TweetObservable:TweetObservable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TweetObservable</span><span class="result"> = <span class="extype" name="rx.lang.scala.Observable">Observable</span>[<a href="#Tweet=twitter4j.Status" class="extmbr" name="bbuzz.Tweet">Tweet</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="bbuzz.TweetObserver" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TweetObserver=rx.lang.scala.Observer[bbuzz.package.Tweet]"></a>
+      <a id="TweetObserver:TweetObserver"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TweetObserver</span><span class="result"> = <span class="extype" name="rx.lang.scala.Observer">Observer</span>[<a href="#Tweet=twitter4j.Status" class="extmbr" name="bbuzz.Tweet">Tweet</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="bbuzz.TweetProvider" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TweetProviderextendsAnyRef"></a>
+      <a id="TweetProvider:TweetProvider"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="TweetProvider.html"><span class="name">TweetProvider</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides Tweets.</p>
+    </li><li name="bbuzz.TweetStreaming" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TweetStreamingextendsTweetConsumer"></a>
+      <a id="TweetStreaming:TweetStreaming"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TweetStreaming.html"><span class="name">TweetStreaming</span></a><span class="result"> extends <a href="TweetConsumer.html" class="extype" name="bbuzz.TweetConsumer">TweetConsumer</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Entry point for the app.</p>
+    </li><li name="bbuzz.TwitterApiTweets" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TwitterApiTweetsextendsTweetProvider"></a>
+      <a id="TwitterApiTweets:TwitterApiTweets"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="TwitterApiTweets.html"><span class="name">TwitterApiTweets</span></a><span class="result"> extends <a href="TweetProvider.html" class="extype" name="bbuzz.TweetProvider">TweetProvider</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides Tweets by streaming from the Twitter API.</p>
+    </li><li name="bbuzz.ZeroMqTweets" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ZeroMqTweetsextendsTweetProvider"></a>
+      <a id="ZeroMqTweets:ZeroMqTweets"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ZeroMqTweets.html"><span class="name">ZeroMqTweets</span></a><span class="result"> extends <a href="TweetProvider.html" class="extype" name="bbuzz.TweetProvider">TweetProvider</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides tweets by listening on a ZeroMQ SUB socket.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="bbuzz.TweetProvider" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TweetProvider"></a>
+      <a id="TweetProvider:TweetProvider"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TweetProvider$.html"><span class="name">TweetProvider</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Factory methods for <a href="TweetProvider.html" class="extype" name="bbuzz.TweetProvider">bbuzz.TweetProvider</a>
+</p>
+    </li><li name="bbuzz.package#createTweet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="createTweet(json:String):scala.collection.immutable.Iterable[bbuzz.package.Tweet]"></a>
+      <a id="createTweet(String):Iterable[Tweet]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createTweet</span><span class="params">(<span name="json">json: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.collection.immutable.Iterable" class="extype" target="_top">Iterable</a>[<a href="#Tweet=twitter4j.Status" class="extmbr" name="bbuzz.Tweet">Tweet</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Try to parse a Tweet JSON into an <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.collection.immutable.Iterable" class="extype" target="_top">scala.collection.immutable.Iterable</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Try to parse a Tweet JSON into an <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.collection.immutable.Iterable" class="extype" target="_top">scala.collection.immutable.Iterable</a>.</p><p>If the json could be parses successfully into a Tweet, the iterable
+has one element (the Tweet), otherwise it's empty.
+Exceptions during parsing will be silently swallowed.
+</p></div><dl class="paramcmts block"><dt class="param">json</dt><dd class="cmt"><p>a string representing a Tweet in JSON.</p></dd><dt>returns</dt><dd class="cmt"><p>an iterable.
+</p></dd></dl></div>
+    </li><li name="bbuzz.example" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="example"></a>
+      <a id="example:example"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="example/package.html"><span class="name">example</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="bbuzz.support" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="support"></a>
+      <a id="support:support"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="support/package.html"><span class="name">support</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="bbuzz.package#tryCreateTweet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tryCreateTweet(json:String):scala.util.Try[bbuzz.package.Tweet]"></a>
+      <a id="tryCreateTweet(String):Try[Tweet]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tryCreateTweet</span><span class="params">(<span name="json">json: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.util.Try" class="extype" target="_top">Try</a>[<a href="#Tweet=twitter4j.Status" class="extmbr" name="bbuzz.Tweet">Tweet</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Try to parse a Tweet JSON into an <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.util.Try" class="extype" target="_top">scala.util.Try</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Try to parse a Tweet JSON into an <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.util.Try" class="extype" target="_top">scala.util.Try</a>.</p><p>If the json could be parses successfully into a Tweet, the result will be
+a <span class="extype" name="scala.util.Success">scala.util.Success</span>, otherwise it's a <span class="extype" name="scala.util.Failure">scala.util.Failure</span>.
+Exceptions during parsing will not be thrown, but are available from the <code>Try</code>.
+</p></div><dl class="paramcmts block"><dt class="param">json</dt><dd class="cmt"><p>a string representing a Tweet in JSON</p></dd><dt>returns</dt><dd class="cmt"><p>a <code>Try</code> of the parsed JSON
+</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../lib/template.js"></script>
+    </body>
+      </html>

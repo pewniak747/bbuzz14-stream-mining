@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>example - bbuzz.example</title>
+          <meta name="description" content="example - bbuzz.example" />
+          <meta name="keywords" content="example bbuzz.example" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'bbuzz.example.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="bbuzz">bbuzz</a></p>
+        <h1>example</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">example</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="bbuzz.example.PrintHashTags" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PrintHashTagsextendsTweetConsumer"></a>
+      <a id="PrintHashTags:PrintHashTags"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="PrintHashTags.html"><span class="name">PrintHashTags</span></a><span class="result"> extends <a href="../TweetConsumer.html" class="extype" name="bbuzz.TweetConsumer">TweetConsumer</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Prints the Tweets hash tags onto stdout.</p>
+    </li><li name="bbuzz.example.PrintText" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PrintTextextendsTweetConsumer"></a>
+      <a id="PrintText:PrintText"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="PrintText.html"><span class="name">PrintText</span></a><span class="result"> extends <a href="../TweetConsumer.html" class="extype" name="bbuzz.TweetConsumer">TweetConsumer</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Prints a Tweets text onto stdout.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="bbuzz.example.ElasticsearchPrinter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ElasticsearchPrinter"></a>
+      <a id="ElasticsearchPrinter:ElasticsearchPrinter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ElasticsearchPrinter$.html"><span class="name">ElasticsearchPrinter</span></a><span class="result"> extends <a href="../TweetStreaming.html" class="extype" name="bbuzz.TweetStreaming">TweetStreaming</a> with <a href="PrintText.html" class="extype" name="bbuzz.example.PrintText">PrintText</a> with <a href="../ElasticsearchScanTweets.html" class="extype" name="bbuzz.ElasticsearchScanTweets">ElasticsearchScanTweets</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Example of connecting to Elasticsearch and printing the Tweets text.</p>
+    </li><li name="bbuzz.example.RedisPrinter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RedisPrinter"></a>
+      <a id="RedisPrinter:RedisPrinter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RedisPrinter$.html"><span class="name">RedisPrinter</span></a><span class="result"> extends <a href="../TweetStreaming.html" class="extype" name="bbuzz.TweetStreaming">TweetStreaming</a> with <a href="PrintText.html" class="extype" name="bbuzz.example.PrintText">PrintText</a> with <a href="../RedisScanTweets.html" class="extype" name="bbuzz.RedisScanTweets">RedisScanTweets</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Example of connecting to Redis and printing the Tweets text.</p>
+    </li><li name="bbuzz.example.TwitterPrinter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TwitterPrinter"></a>
+      <a id="TwitterPrinter:TwitterPrinter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TwitterPrinter$.html"><span class="name">TwitterPrinter</span></a><span class="result"> extends <a href="../TweetStreaming.html" class="extype" name="bbuzz.TweetStreaming">TweetStreaming</a> with <a href="PrintText.html" class="extype" name="bbuzz.example.PrintText">PrintText</a> with <a href="../TwitterApiTweets.html" class="extype" name="bbuzz.TwitterApiTweets">TwitterApiTweets</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Example of connection to the Twitter streaming API and printing the Tweets text.</p>
+    </li><li name="bbuzz.example.ZeromqPrinter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZeromqPrinter"></a>
+      <a id="ZeromqPrinter:ZeromqPrinter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ZeromqPrinter$.html"><span class="name">ZeromqPrinter</span></a><span class="result"> extends <a href="../TweetStreaming.html" class="extype" name="bbuzz.TweetStreaming">TweetStreaming</a> with <a href="PrintHashTags.html" class="extype" name="bbuzz.example.PrintHashTags">PrintHashTags</a> with <a href="../ZeroMqTweets.html" class="extype" name="bbuzz.ZeroMqTweets">ZeroMqTweets</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Example of connection to ZeroMQ and printing the Tweets hash tags.</p>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script>
+    </body>
+      </html>
