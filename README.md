@@ -7,9 +7,9 @@ This repository should help you getting started by providing the boilerplate of 
 
 ## See also ##
 
-Clojure starter: https://github.com/sojoner/stromer
-Python starter: https://github.com/truemped/bbhack-2014
-Scala starter (this repository): https://github.com/knutwalker/bbuzz14-stream-mining
+- Clojure starter: https://github.com/sojoner/stromer
+- Python starter: https://github.com/truemped/bbhack-2014
+- Scala starter (this repository): https://github.com/knutwalker/bbuzz14-stream-mining
 
 
 ## Requirements ##
@@ -77,6 +77,9 @@ If you're unsure about what parameters are required — the compiler will tell y
 ### License
 
 This project, [twitter4j](http://twitter4j.org/en/index.html), [RxJava](https://github.com/Netflix/RxJava), and [Json4s](http://json4s.org/) are available under [Apache Software License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
+
 [Dispatch](http://dispatch.databinder.net/Dispatch.html) and [JeroMQ](https://github.com/zeromq/jeromq) are distributed unter [LGPLv3 License](http://opensource.org/licenses/lgpl-3.0.html).
+
 [Jedis](https://github.com/xetorthio/jedis) is available under [MIT License](https://raw.githubusercontent.com/xetorthio/jedis/master/LICENSE.txt).
+
 The [sbt starter](https://github.com/paulp/sbt-extras) is available under [BSD License](https://raw.githubusercontent.com/paulp/sbt-extras/master/LICENSE.txt)
