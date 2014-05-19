@@ -72,6 +72,9 @@ you create a _mainable_ object, that you can run.
 
 If you're unsure about what parameters are required — the compiler will tell you when something's missing.
 
+### Scaladoc
+
+The scaladoc is available at [this github page](http://knutwalker.github.io/bbuzz14-stream-mining/scaladoc/).
 
 
 ### License
