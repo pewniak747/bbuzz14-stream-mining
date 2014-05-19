@@ -13,6 +13,10 @@ libraryDependencies ++= Seq(
   "org.zeromq"               % "jeromq"           % "0.3.2"
 )
 
+autoAPIMappings := true
+
+scalacOptions in (Compile, doc) ++= List("-skip-packages", "bbuzz.sensitive")
+
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
 Revolver.settings

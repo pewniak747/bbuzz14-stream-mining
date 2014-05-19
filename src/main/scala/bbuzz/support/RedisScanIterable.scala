@@ -2,6 +2,7 @@ package bbuzz.support
 
 import java.net.InetSocketAddress
 import redis.clients.jedis._
+import scala.collection.immutable.Iterable
 
 class RedisScanIterable private (redis: InetSocketAddress, db: Int) extends Iterable[String] {
   import RedisScanIterable.RedisScanIterator

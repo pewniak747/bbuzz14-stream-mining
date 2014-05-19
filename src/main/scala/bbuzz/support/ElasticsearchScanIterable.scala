@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 import org.json4s._
 import org.json4s.jackson.JsonMethods._
+import scala.collection.immutable.Iterable
 import scala.util.{Failure, Success, Try}
 
 
