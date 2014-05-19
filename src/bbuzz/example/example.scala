@@ -58,8 +58,19 @@ trait PrintHashTags extends TweetConsumer {
 object RedisPrinter extends TweetStreaming with PrintText
 with RedisScanTweets {
 
+  /**
+   * The hostname of the Redis server.
+   */
   def host = "localhost"
+
+  /**
+   * The port of the Redis server.
+   */
   def port = 6379
+
+  /**
+   * The Redis db.
+   */
   def db = 0
 }
 
@@ -70,8 +81,19 @@ with RedisScanTweets {
 object ElasticsearchPrinter extends TweetStreaming with PrintText
 with ElasticsearchScanTweets {
 
+  /**
+   * The hostname of the Elasticsearch server.
+   */
   def host = "localhost"
+
+  /**
+   * The port of the HTTP endpoint of the Elasticsearch server.
+   */
   def port = 9200
+
+  /**
+   * The index that contains the tweets.
+   */
   def index = "tweets"
 }
 
@@ -84,9 +106,24 @@ with ElasticsearchScanTweets {
 object TwitterPrinter extends TweetStreaming with PrintText
 with TwitterApiTweets {
 
+  /**
+   * @return the OAuth Consumer Key (per authenticated request)
+   */
   def OAuthConsumerKey = ???
+
+  /**
+   * @return the OAuth Consumer Secret (per authenticated request)
+   */
   def OAuthConsumerSecret = ???
+
+  /**
+   * @return the OAuth Access Token (per authorized app)
+   */
   def OAuthAccessToken = ???
+
+  /**
+   * @return the OAuth Access Token Secret (per authorized app)
+   */
   def OAuthAccessTokenSecret = ???
 }
 
@@ -97,7 +134,22 @@ with TwitterApiTweets {
 object ZeromqPrinter extends TweetStreaming with PrintHashTags
 with ZeroMqTweets {
 
+  /**
+   * The hostname of the publisher socket.
+   * They should implement a [[http://api.zeromq.org/3-2:zmq-socket#toc9 ZMQ_PUB]] socket.
+   *
+   * If you connect too localhost, do not use `localhost` but `127.0.0.1` instead.
+   */
   def host = "127.0.0.1"
+
+  /**
+   * The port of the publisher socket.
+   * They should implement a [[http://api.zeromq.org/3-2:zmq-socket#toc9 ZMQ_PUB]] socket.
+   */
   def port = 5561
+
+  /**
+   * The ZMQ channel to subscribe to.
+   */
   def channel = "tweet.stream"
 }

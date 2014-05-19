@@ -2,6 +2,7 @@ package bbuzz
 
 import bbuzz.support.RedisScanIterable
 import java.net.InetSocketAddress
+import scala.collection.immutable.Iterable
 
 /**
  * Provides tweets by scanning a Redis db.
