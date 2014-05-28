@@ -27,6 +27,15 @@ This repository should help you getting started by providing the boilerplate of 
 git clone https://github.com/knutwalker/bbuzz14-stream-mining.git && cd bbuzz14-stream-mining
 ```
 
+## Use at bbuzz hackday 2014-05-28
+
+```bash
+./sbt run
+```
+
+
+_otherwise_
+
 
 ### compile
 
