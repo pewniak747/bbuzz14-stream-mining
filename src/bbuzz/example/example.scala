@@ -89,7 +89,7 @@ with ElasticsearchScanTweets {
   /**
    * The port of the HTTP endpoint of the Elasticsearch server.
    */
-  def port = 9200
+  def port = 80
 
   /**
    * The index that contains the tweets.

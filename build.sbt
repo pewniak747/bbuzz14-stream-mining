@@ -19,6 +19,8 @@ libraryDependencies ++= Seq(
   "org.zeromq"               % "jeromq"           % "0.3.2"
 )
 
+mainClass in Compile := Some("bbuzz.example.ElasticsearchPrinter")
+
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
 Revolver.settings
