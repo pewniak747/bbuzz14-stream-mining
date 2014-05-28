@@ -1,6 +1,9 @@
 package bbuzz
 package example
 
+import scala.collection.{mutable, SortedMap}
+import scala.collection.immutable.SortedSet
+
 /**
  * Prints a Tweets text onto stdout.
  */
@@ -24,7 +27,72 @@ trait PrintText extends TweetConsumer {
   def handleException(exception: Throwable): Unit = exception.printStackTrace()
 }
 
+class TopK(size: Int) {
+  val map = mutable.HashMap[String, Int]()
 
+  def +=(key: String) = increment(key)
+
+  def increment(key: String) = {
+    if(map.keySet.contains(key))
+      map += (key -> (map(key) + 1))
+    else if(map.size < size)
+      map += (key -> 1)
+    else {
+      val minimumElement = map.minBy({case (key: String, value: Int) => value})
+      map -= minimumElement._1
+      map += (key -> (minimumElement._2 + 1))
+    }
+  }
+
+  def topList: List[(String, Int)] = map.toList.sortBy(-1 * _._2)
+}
+
+trait  TopHashTags extends TweetConsumer {
+
+  val topBuckets: mutable.HashMap[String, TopK] = mutable.HashMap()
+  var counter = 0
+
+  /**
+   * Gets called for every tweet that is pulled from the [[bbuzz.TweetProvider]].
+   * This method should not block and complete quickly.
+   *
+   * @param tweet a new [[Tweet]]
+   */
+  override def onTweet(tweet: bbuzz.Tweet): Unit = {
+    val createdAt = tweet.getCreatedAt
+    val formattedCreatedAt = createdAt.getYear + "-" + ("%02d".format(createdAt.getMonth)) + "-" + ("%02d".format(createdAt.getDate)) +
+      " " + ("%02d".format(createdAt.getHours))
+
+    val topK: TopK = topBuckets.getOrElse(formattedCreatedAt, new TopK(100))
+    topBuckets(formattedCreatedAt) = topK
+
+    tweet.getHashtagEntities.foreach(hashTag => topK.increment(hashTag.getText))
+    counter += 1
+
+    if(counter % 500 == 0) {
+      println("After " + counter + " tweets")
+      topBuckets.toList.sortBy(_._1).drop(topBuckets.size - 3).foreach({ case (time: String, topK: TopK) =>
+        println("---------- Top 10 (" + time + ")------------")
+        val topList = topK.topList.zipWithIndex
+
+        for (((hashTag: String, count: Int), index: Int) <- topList.take(10)) {
+          println(s"${index + 1}. $hashTag ($count)")
+        }
+      }
+      )
+      println("\n\n\n")
+    }
+  }
+
+  /**
+   * Gets called when an exception occurred during providing the Tweets.
+   * This will be a fatal exception, and tweets will not continue to flow after
+   * this exception occurred.
+   *
+   * @param exception the fatal exception
+   */
+  def handleException(exception: Throwable): Unit = exception.printStackTrace()
+}
 /**
  * Prints the Tweets hash tags onto stdout.
  */
@@ -78,8 +146,7 @@ with RedisScanTweets {
 /**
  * Example of connecting to Elasticsearch and printing the Tweets text.
  */
-object ElasticsearchPrinter extends TweetStreaming with PrintHashTags
-with ElasticsearchScanTweets {
+object ElasticsearchPrinter extends TweetStreaming with TopHashTags with ElasticsearchScanTweets {
 
   /**
    * The hostname of the Elasticsearch server.
@@ -140,13 +207,13 @@ with ZeroMqTweets {
    *
    * If you connect too localhost, do not use `localhost` but `127.0.0.1` instead.
    */
-  def host = "127.0.0.1"
+  def host = "144.76.187.43"
 
   /**
    * The port of the publisher socket.
    * They should implement a [[http://api.zeromq.org/3-2:zmq-socket#toc9 ZMQ_PUB]] socket.
    */
-  def port = 5561
+  def port = 5555
 
   /**
    * The ZMQ channel to subscribe to.
