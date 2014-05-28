@@ -33,6 +33,6 @@ trait ElasticsearchScanTweets extends TweetProvider.FromStringIterable {
    */
   final def iterable: Iterable[String] = {
     val es = s"http://$host:$port"
-    ElasticsearchScanIterable(es, index)
+    ElasticsearchScanIterable(es, index, 10)
   }
 }

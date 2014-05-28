@@ -78,13 +78,13 @@ with RedisScanTweets {
 /**
  * Example of connecting to Elasticsearch and printing the Tweets text.
  */
-object ElasticsearchPrinter extends TweetStreaming with PrintText
+object ElasticsearchPrinter extends TweetStreaming with PrintHashTags
 with ElasticsearchScanTweets {
 
   /**
    * The hostname of the Elasticsearch server.
    */
-  def host = "localhost"
+  def host = "es01.geekthink.de"
 
   /**
    * The port of the HTTP endpoint of the Elasticsearch server.
@@ -94,7 +94,7 @@ with ElasticsearchScanTweets {
   /**
    * The index that contains the tweets.
    */
-  def index = "tweets"
+  def index = "bbuzz-hackday"
 }
 
 
